@@ -36,6 +36,15 @@
   <dd>
     <%= @movie.description %>
   </dd>
+  
+  <dt>
+    Director
+  </dt>
+  <dd>
+    <a href="/directors/<%= @movie.director_id %>">
+        <%= Director.find(@movie.director_id).name %>
+    </a>
+  </dd>
 
   <dt>
     Image
